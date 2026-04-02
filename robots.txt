@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dobroagip.github.io/bws-portfolio/sitemap.xml
