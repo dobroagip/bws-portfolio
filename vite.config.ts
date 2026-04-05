@@ -4,11 +4,21 @@ import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
 import sitemap from 'vite-plugin-sitemap';
 
-export default defineConfig(({mode}) => {
-  const env = loadEnv(mode, '.', '');
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+
   return {
     base: '/bws-portfolio/',
-    plugins: [react(), tailwindcss(), sitemap({ hostname: 'https://dobroagip.github.io/bws-portfolio/', outDir: 'dist' }),],
+    plugins: [
+      react(),
+      tailwindcss(),
+      sitemap({
+        hostname: 'https://dobroagip.github.io',
+        basePath: '/bws-portfolio',
+        outDir: 'dist',
+        generateRobotsTxt: false,
+      }),
+    ],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },

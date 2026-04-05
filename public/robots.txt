@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://bws.studio/sitemap.xml
+Sitemap: https://dobroagip.github.io/bws-portfolio/sitemap.xml

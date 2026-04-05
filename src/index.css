@@ -2,10 +2,42 @@
 
 @theme {
   --color-brand-purple: #7E22CE;
-  --color-brand-black: #050505;
+  --color-brand-black: #1A1A1A;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
 
+/* 2. Запрет горизонтального скролла для всего сайта */
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+  max-width: 100%;
+  background-color: #000; /* Ваш фон */
+  color: #fff;
+}
+
+/* 3. Картинки не должны ломать верстку */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 4. Ссылки и текст */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 5. Принудительный перенос длинных слов (для email и ссылок) */
+..break-anywhere {
+  word-break: break-all;
+  /* overflow-wrap: break-word; */
+}
 @layer base {
   body {
     @apply bg-brand-black text-white antialiased selection:bg-brand-purple selection:text-white;

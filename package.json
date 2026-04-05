@@ -4,7 +4,7 @@
   "homepage": "https://dobroagip.github.io/bws-portfolio/",
   "type": "module",
   "scripts": {
-   "dev": "vite",
+    "dev": "vite",
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -31,6 +31,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
